@@ -72,7 +72,7 @@ while True:
             os.system('pacman -Qe | column')
             print("\n")
         elif options == 10:
-            os.system('pacman -Q')
+            os.system('pacman -Q | column')
             print("\n")
         elif options == 12:
             os.system('sudo pacman -S pacman-contrib')
