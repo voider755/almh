@@ -15,7 +15,9 @@ INSTALLATION: I don't think there's really a need to install it. You just need P
 $ python3 almh.py
 
 Or use full path from elsewhere. There's no need to make the archive executable, the Python interpreter should run it as it is.
+
 You can of course add an alias to your $SHELL, say you use bash, then in .bashrc:
+
 alias almh='python3 /full_path_to_the_archive/almh.py'
 
 Then just type almh (or whatever alias you prefer to use), an it should run.
