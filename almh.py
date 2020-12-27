@@ -1,19 +1,21 @@
+#!/usr/bin/env python3
+
 # almh (Arch Linux Maintenance Helper)
 # (c) Voider 2020
 # Contact me: voider (at) disroot dot org or as "invoider" at mastodon dot social
 # https://invoider.wordpress.com
 # License: FreeBSD(-like) License. Use at your own risk
-# Gives you a CLI menu with some common maintenance options inside 
+# Gives you a CLI menu with some common maintenance options inside
 # a *stock* Arch Linux system
-# Plausibly works on derivatives too, but not tested at the moment. 
+# Plausibly works on derivatives too, but not tested at the moment.
 # Pacman is absolutely needed, pacman-contrib and newsboat are needed for some options.
 # Please read the README file and code before using this
-green = '\033[32m'
-cyan = '\033[36m'
-red = '\033[31m'
-blue = '\033[34m'
-resetc = '\33[m'
-print('\n' , red + 'IMPORTANT.', resetc + "If you are using this for the first time, you'll need")
+green = "\033[32m"
+cyan = "\033[36m"
+red = "\033[31m"
+blue = "\033[34m"
+resetc = "\33[m"
+print("\n" , red + "IMPORTANT.", resetc + "If you are using this for the first time, you'll need")
 print ("newsboat and pacman-contrib to use options 1, 3 and 7 .")
 print('Type special option' , green + "'12'" , resetc + 'to install pacman-contrib.')
 print('Type special option' , green + "'13'" , resetc + "to install newsboat and add Arch news RSS")
@@ -43,44 +45,49 @@ while True:
 ************************************************************************\n
  """ , resetc)
         options = int(input())
-        if options == 1:
-            os.system("newsboat -r")
-        elif options == 2:
-            os.system("sudo pacman -Syu")
+        commands = ['"newsboat -r"', '"sudo pacman -Syu"', '"sudo paccache -rk3 -v"', '"pacman -Ss "+input("Type the package name or keyword of the package you want to query: ")', '"sudo pacman -S "+input("Type the package name(s) you want to install: ")', '"sudo pacman -Rs "+input("Type the name of the package(s) you want to remove from your system: ")', '"sudo paccache -ruk0 -v"', '"sudo pacman -Qtdq | sudo pacman -Rns -"', '"pacman -Qe | column"', '"pacman -Q | column"', '"sudo pacman -S pacman-contrib"', '"sudo pacman -S newsboat && sleep 4 && mkdir ~/.config/newsboat/ && echo \"https://archlinux.org/feeds/news/\" > ~/.config/newsboat/urls"']
+        print(len(commands))
+        if options in range(len(commands)):
+            exec("os.system("+commands[options-1]+")")
             print("\n")
-        elif options == 3:
-            os.system("sudo paccache -rk3 -v")
-            print("\n")
-        elif options == 4:
-            package = input('Type the package name or keyword of the package you want to query: ')
-            os.system('pacman -Ss ' + package)
-            print("\n")
-        elif options == 5:
-            install = input('Type the package name(s) you want to install: ')
-            os.system('sudo pacman -S ' + install)
-            print('\n')
-        elif options == 6:
-            remove = input('Type the name of the package(s) you want to remove from your system: ')
-            os.system('sudo pacman -Rs ' + remove)
-            print("\n")
-        elif options == 7:
-            os.system("sudo paccache -ruk0 -v")
-            print("\n")
-        elif options == 8:
-            os.system('sudo pacman -Qtdq | sudo pacman -Rns -')
-            print("\n")
-        elif options == 9:
-            os.system('pacman -Qe | column')
-            print("\n")
-        elif options == 10:
-            os.system('pacman -Q | column')
-            print("\n")
-        elif options == 12:
-            os.system('sudo pacman -S pacman-contrib')
-            print("\n")
-        elif options == 13:
-            os.system("sudo pacman -S newsboat && sleep 4 && mkdir ~/.config/newsboat/ && echo 'https://archlinux.org/feeds/news/' > ~/.config/newsboat/urls")
-            print("\n")
+        # if options == 1:
+        #     os.system("newsboat -r")
+        # elif options == 2:
+        #     os.system("sudo pacman -Syu")
+        #     print("\n")
+        # elif options == 3:
+        #     os.system("sudo paccache -rk3 -v")
+        #     print("\n")
+        # elif options == 4:
+        #     package = input("Type the package name or keyword of the package you want to query: ")
+        #     os.system("pacman -Ss " + package)
+        #     print("\n")
+        # elif options == 5:
+        #     install = input("Type the package name(s) you want to install: ")
+        #     os.system("sudo pacman -S " + install)
+        #     print("\n")
+        # elif options == 6:
+        #     remove = input("Type the name of the package(s) you want to remove from your system: ")
+        #     os.system("sudo pacman -Rs " + remove)
+        #     print("\n")
+        # elif options == 7:
+        #     os.system("sudo paccache -ruk0 -v")
+        #     print("\n")
+        # elif options == 8:
+        #     os.system("sudo pacman -Qtdq | sudo pacman -Rns -")
+        #     print("\n")
+        # elif options == 9:
+        #     os.system("pacman -Qe | column")
+        #     print("\n")
+        # elif options == 10:
+        #     os.system("pacman -Q | column")
+        #     print("\n")
+        # elif options == 12:
+        #     os.system("sudo pacman -S pacman-contrib")
+        #     print("\n")
+        # elif options == 13:
+        #     os.system("sudo pacman -S newsboat && sleep 4 && mkdir ~/.config/newsboat/ && echo "https://archlinux.org/feeds/news/" > ~/.config/newsboat/urls")
+        #     print("\n")
         elif options == 11:
             print("Thank you for using almh")
             break
@@ -88,4 +95,3 @@ while True:
             print(red + "Please choose an option, 1-11\n" , resetc)
     except:
         print (red + "Please choose an option, 1-11\n" , resetc)
-
