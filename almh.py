@@ -80,7 +80,7 @@ while True:
             os.system('sudo pacman -S pacman-contrib')
             print("\n")
         elif options == 13:
-            os.system("sudo pacman -S newsboat && sleep 4 && mkdir ~/.config/newsboat/ && echo 'https://archlinux.org/feeds/news/' > ~/.config/newsboat/urls")
+            os.system("sudo pacman -S newsboat && sleep 4 && mkdir ~/.config/newsboat/ && echo 'https://archlinux.org/feeds/news/' >> ~/.config/newsboat/urls")
             print("\n")
         elif options == 11:
             print("Thank you for using almh")
