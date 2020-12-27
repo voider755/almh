@@ -49,7 +49,7 @@ while True:
             os.system("sudo pacman -Syu")
             print("\n")
         elif options == 3:
-            os.system("sudo paccache -rv")
+            os.system("sudo paccache -rk3 -v")
             print("\n")
         elif options == 4:
             package = input('Type the package name or keyword of the package you want to query: ')
@@ -79,7 +79,7 @@ while True:
             os.system('sudo pacman -S pacman-contrib')
             print("\n")
         elif options == 13:
-            os.system("sudo pacman -S newsboat && sleep 4 && mkdir ~/.newsboat/ && echo 'https://archlinux.org/feeds/news/' > ~/.newsboat/urls")
+            os.system("sudo pacman -S newsboat && sleep 4 && mkdir ~/.config/newsboat/ && echo 'https://archlinux.org/feeds/news/' > ~/.config/newsboat/urls")
             print("\n")
         elif options == 11:
             print("Thank you for using almh")
