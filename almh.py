@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # almh (Arch Linux Maintenance Helper)
 # (c) Voider 2020
 # Contact me: voider (at) disroot dot org or as "invoider" at mastodon dot social
@@ -86,6 +87,8 @@ while True:
             break
         else:
             print(red + "Please choose an option, 1-11\n" , resetc)
+        except KeyboardInterrupt:
+        exit()
     except:
         print (red + "Please choose an option, 1-11\n" , resetc)
 
