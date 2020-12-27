@@ -12,13 +12,13 @@ DISCLAIMER: This is an alpha release. I'm no coder, just trying to learn some Py
 
 INSTALLATION: I don't think there's really a need to install it. You just need Python (it works with the current version inside Arch official repositories), a terminal emulator if in a graphic session and, of course, an Arch Linux (may or may not work as expected in a derivative) system installed. If it's outside of $PATH, just open your terminal emulator, navigate to the directory where the archive is contained, and type:
 
-$ python3 almh.py
+$ ./almh.py
 
-Or use full path from elsewhere. There's no need to make the archive executable, the Python interpreter should run it as it is.
+Or use full path from elsewhere.
 
 You can of course add an alias to your $SHELL, say you use bash, then in .bashrc:
 
-alias almh='python3 /full_path_to_the_archive/almh.py'
+alias almh='/full_path_to_the_archive/almh.py'
 
 Then just type almh (or whatever alias you prefer to use), an it should run.
 ****************************************************************************
