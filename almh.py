@@ -87,7 +87,7 @@ while True:
             break
         else:
             print(red + "Please choose an option, 1-11\n" , resetc)
-        except KeyboardInterrupt:
+    except KeyboardInterrupt:
         exit()
     except:
         print (red + "Please choose an option, 1-11\n" , resetc)
