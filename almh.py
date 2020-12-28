@@ -47,8 +47,6 @@ while True:
  """ , resetc)
         options = int(input())-1
         commands_arr = list(range(len(commands)))
-        print(options)
-        print(commands_arr[:10] + commands_arr[11:])
         if options in commands_arr[:10] + commands_arr[11:]:
             exec("os.system("+commands[options]+")")
             print("\n")
