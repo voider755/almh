@@ -6,8 +6,6 @@
 # License: FreeBSD(-like) License. Use at your own risk
 # Gives you a CLI menu with some common maintenance options inside 
 # a *stock* Arch Linux system
-# Plausibly works on derivatives too, but not tested at the moment. 
-# Pacman is absolutely needed, pacman-contrib and newsboat are needed for some options.
 # Please read the README file and code before using this
 green = '\033[32m'
 cyan = '\033[36m'
@@ -56,6 +54,12 @@ while True:
             package = input('Type the package name or keyword of the package you want to query: ')
             os.system('pacman -Ss ' + package)
             print("\n")
+            pkginstall = str(input("Do you want to install any package? (type 'y', anything else to continue) "))
+            if pkginstall == 'y':
+                install = input('Type the package name(s) you want to install: ')
+                os.system('sudo pacman -S ' + install)
+            elif pkginstall != 'y':
+                continue
         elif options == 5:
             install = input('Type the package name(s) you want to install: ')
             os.system('sudo pacman -S ' + install)
