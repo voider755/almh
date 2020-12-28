@@ -38,7 +38,7 @@ while True:
 * 8.  # Remove orphaned packages                                       *
 * 9.  List explicitly installed packages                               *
 * 10. List all installed packages                                      *
-* 11. Exit                                                             *
+* 11. Exit (type 11 or use Ctrl+c)                                     *
 ************************************************************************\n
  """ , resetc)
         options = int(input())
