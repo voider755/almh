@@ -1,6 +1,6 @@
 # almh
 # (Arch Linux Maintenance Helper)
-![alt text](https://raw.githubusercontent.com/voider755/almh/cde8fc40fd3f081d6910b49ec146a9d26e2124ea/Screenshot_2020-12-27_00-42-34.png)
+![alt text](https://raw.githubusercontent.com/voider755/almh/main/Screenshot_2020-12-27_00-42-34.png)
 
 Gives you a CLI menu with some common maintenance options inside an Arch Linux system 
 
@@ -21,6 +21,10 @@ You can of course add an alias to your $SHELL, say you use bash, then in .bashrc
 alias almh='/full_path_to_the_archive/almh.py'
 
 Then just type almh (or whatever alias you prefer to use), an it should run.
+****************************************************************************
+CHANGES: 
+- File made executable without the Python prefix and added option to exit the program with Ctrl+c (thanks xgr-linux!)
+- Now, after performing a package query, an option to ask if the user wants to install some package pops up automatically.
 ****************************************************************************
 almh (Arch Linux Maintenance Helper) is (c) Voider 2020
 Contact me: voider (at) disroot.org or as "invoider" at mastodon dot social
