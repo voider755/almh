@@ -1,6 +1,6 @@
 # almh
 # (Arch Linux Maintenance Helper)
-![alt text](https://raw.githubusercontent.com/voider755/almh/main/Screenshot_2020-12-27_00-42-34.png)
+![alt text](https://raw.githubusercontent.com/voider755/almh/main/Screenshot_2020-12-28_10-25-09.png)
 
 Gives you a CLI menu with some common maintenance options inside an Arch Linux system 
 
