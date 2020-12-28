@@ -25,7 +25,7 @@ Then just type almh (or whatever alias you prefer to use), an it should run.
 CHANGES: 
 - File made executable without the Python prefix and added option to exit the program with Ctrl+c (thanks xgr-linux!)
 - Now, after performing a package query, an option to ask if the user wants to install some package pops up automatically.
-- The shell script which install newsboat won't overwrite any (likely non existent) urls config file. Plus, it is now put inside the more XDG-compliant ~/.config/newsboat instead of the app default ~/.newsboat (thanks u/TopDownTom, u/MuddyArch and u/armoredkitten from the Arch Linux Reddit community for their explanations and suggestions!)
+- The shell script which install newsboat won't overwrite any (likely non existent) urls config file. Plus, it is now put inside the more XDG-compliant ~/.config/newsboat instead of the app default ~/.newsboat (thanks u/TopDownTom, u/MuddyArch and u/armoredkitten22 from the Arch Linux Reddit community for their explanations and suggestions!)
 ****************************************************************************
 almh (Arch Linux Maintenance Helper) is (c) Voider 2020
 Contact me: voider (at) disroot.org or as "invoider" at mastodon dot social
