@@ -4,20 +4,25 @@
 
 Gives you a CLI menu with some common maintenance options inside an Arch Linux system 
 
-The Python code is basically a "wrapper" to execute ```pacman```/```paccache```/```newsboat``` commands. They're all, I believe, fairly "safe", non-agressive common maintenance options,all of them rightfully documented in the Arch Wiki. It is advised to review the Arch Linux web before running a system update/upgrade, to check for possible required manual interventions and whatnot, so an "extra" option to install ```newsboat``` and add the Arch web news RSS is added. After this, you can check for Arch news with a ```newsboat``` option inside the ```almh``` menu. Another "extra" option should install ```pacman-contrib```, which is not present in a "base" Arch Linux installation.
+The Python code is basically a "wrapper" to execute ```pacman```/```paccache```/```newsboat``` commands. They're all, I believe, fairly "safe" (as "safe" as they would be executed outside of ```almh```, that is), non-agressive common maintenance options, all of them rightfully documented in the Arch Wiki. It is advised to review the Arch Linux web before running a system update/upgrade, to check for possible required manual interventions and whatnot, so an "extra" option to install ```newsboat``` and add the Arch web news RSS is added. After this, you can check for Arch news with a ```newsboat``` option inside the ```almh``` menu. Another "extra" option should install ```pacman-contrib```, which is not present in a "base" Arch Linux installation.
 
 AUR helpers are not currently supported, but the code can easily be forked to switch ```pacman``` commands for, say, ```yay``` ones.
 
-DISCLAIMER: This is an alpha release. I'm no coder, just trying to learn some Python and did this as a learning experience. I'm releasing this because a) it seems to work, and I think someone may find it useful, and more important b) because someone may check the code, point where it's wrong, and help me improve it. You can of course check the ```almh``` code before performing any operation with this. USE AT YOUR OWN RISK.
+DISCLAIMER: Check the operations executed by ```almh``` code before performing any operation with this and be sure of what they do and if you want to use them. USE AT YOUR OWN RISK.
 
-INSTALLATION: I don't think there's really a need to install it. You just need Python (it works with the current version inside Arch official repositories), a terminal emulator if in a graphic session and, of course, an Arch Linux (may or may not work as expected in a derivative) system installed. If it's outside of ```$PATH```, just open your terminal emulator, navigate to the directory where the archive is contained, and type:
+INSTALLATION: It's ![in the AUR](https://aur.archlinux.org/packages/almh-git/) as ```almh-git``` (thanks to lxgr!), so you can intall it from there. Follow the Arch wiki directions for installing from the AUR, or use your AUR helper of choice. You just need Python (it works with the current version inside Arch official repositories), ```sudo``` (or a ```sudo``` compatible alternative) a terminal emulator if in a graphic session and, of course, an Arch Linux (may or may not work as expected in a derivative) system installed. The optional dependencies ```newsboat``` and ```pacman-contrib``` can be installed (with the Arch news RSS automatically added in ```newsboat```) afterwards using ```almh```. After installation, you can launch the application from the command line with ```almh.py```. You can write a ```$SHELL``` alias if you want to remove the ```.py``` from the launch command. Say you use ```bash```, then in ```.bashrc```
+
+```alias almh='alias.py'```
+
+
+In case you don't want to use the AUR package, you can download ```almh.py``` from here. To install it, move it to your ```$PATH``` and give it appropiate permissions to run. If you prefer to keep it outside of your ```$PATH``` (likely, somewhere inside your ```$HOME```), you won't need to make the archive executable. Just open your terminal emulator, navigate to the directory where the archive is contained, and type:
 
 ```shell
 $ ./almh.py
 ```
 Or use full path from elsewhere.
 
-You can of course add an alias to your ```$SHELL```, say you use ```bash```, then in ```.bashrc```:
+You maybe want to add an alias to your ```$SHELL```, like this:
 ```shell
 alias almh='/full_path_to_the_archive/almh.py'
 ```
@@ -27,6 +32,10 @@ CHANGES:
 - File made executable without the Python prefix and added option to exit the program with ```Ctrl+c``` (thanks xgr-linux!)
 - Now, after performing a package query, an option to ask if the user wants to install some package pops up automatically.
 - The shell script which installs ```newsboat``` won't overwrite any (likely non existent) ```urls``` config file. Plus, it is now put inside the more XDG-compliant ```~/.config/newsboat``` instead of the app default ```~/.newsboat``` (thanks u/TopDownTom, u/MuddyArch and u/armoredkitten22 from the Arch Linux Reddit community for their explanations and suggestions!)
+
+TO DO:
+- Considering adding a bunch of new options, some of them using ```systemd``` capabilities, check logs, give system information... That must likely imply using a main menu and then some sub-menus, so it would be a tad bit less straightforward/newbie-friendly perhaps. Maybe fork the code for an "advanced" version.
+- "Prettify" the scheme a bit.
 ****************************************************************************
 almh (Arch Linux Maintenance Helper) is (c) Voider 2020
 Contact me: voider (at) disroot.org or as "invoider" at mastodon dot social
