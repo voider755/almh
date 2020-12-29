@@ -10,12 +10,12 @@ AUR helpers are not currently supported, but the code can easily be forked to sw
 
 DISCLAIMER: Check the operations executed by ```almh``` code before performing any operation with this and be sure of what they do and if you want to use them. USE AT YOUR OWN RISK.
 
-INSTALLATION: It's ![in the AUR](https://aur.archlinux.org/packages/almh-git/) as ```almh-git``` (thanks to lxgr!), so you can intall it from there. Follow the Arch wiki directions for installing from the AUR, or use your AUR helper of choice. You just need Python (it works with the current version inside Arch official repositories), ```sudo``` (or a ```sudo``` compatible alternative) a terminal emulator if in a graphic session and, of course, an Arch Linux (may or may not work as expected in a derivative) system installed. The optional dependencies ```newsboat``` and ```pacman-contrib``` can be installed (with the Arch news RSS automatically added in ```newsboat```) afterwards using ```almh```. After installation, you can launch the application from the command line with ```almh.py```. You can write a ```$SHELL``` alias if you want to remove the ```.py``` from the launch command. Say you use ```bash```, then in ```.bashrc```
+INSTALLATION: It's ![in the AUR](https://aur.archlinux.org/packages/almh-git/) as ```almh-git``` (thanks to lxgr!), so you can install it from there. Follow the Arch wiki directions for installing from the AUR, or use your AUR helper of choice. You just need Python (it works with the current version inside Arch official repositories), ```sudo``` (or a ```sudo``` compatible alternative), a terminal emulator if in a graphic session and, of course, an Arch Linux (may or may not work as expected in a derivative) system installed. The optional dependencies ```newsboat``` and ```pacman-contrib``` can be installed (with the Arch news RSS automatically added in ```newsboat```) afterwards using ```almh```. After installation, you can launch the application from the command line with ```almh.py```. You can write a ```$SHELL``` alias if you want to remove the ```.py``` from the launch command. Say you use ```bash```, then in ```.bashrc```
 
-```alias almh='alias.py'```
+```alias almh='almh.py'```
 
 
-In case you don't want to use the AUR package, you can download ```almh.py``` from here. To install it, move it to your ```$PATH``` and give it appropiate permissions to run. If you prefer to keep it outside of your ```$PATH``` (likely, somewhere inside your ```$HOME```), you won't need to make the archive executable. Just open your terminal emulator, navigate to the directory where the archive is contained, and type:
+In case you don't want to use the AUR package, you can download ```almh.py``` from here. To install it, move it to your ```$PATH``` and give it appropiate permissions to run if necessary. If you prefer to keep it outside of your ```$PATH``` (likely, somewhere inside your ```$HOME```), you won't need to make the archive executable. Just open your terminal emulator, navigate to the directory where the archive is contained, and type:
 
 ```shell
 $ ./almh.py
