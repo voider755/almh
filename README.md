@@ -22,11 +22,11 @@ $ ./almh.py
 ```
 Or use full path from elsewhere.
 
-You maybe want to add an alias to your ```$SHELL```, like this:
+You may want to add an alias to your ```$SHELL```, like this:
 ```shell
 alias almh='/full_path_to_the_archive/almh.py'
 ```
-Then just type ```almh``` (or whatever alias you prefer to use), an it should run.
+Then just type ```almh``` (or whatever alias you prefer to use), and it should run.
 ****************************************************************************
 CHANGES: 
 - File made executable without the Python prefix and added option to exit the program with ```Ctrl+c``` (thanks xgr-linux!)
@@ -34,7 +34,6 @@ CHANGES:
 - The shell script which installs ```newsboat``` won't overwrite any (likely non existent) ```urls``` config file. Plus, it is now put inside the more XDG-compliant ```~/.config/newsboat``` instead of the app default ```~/.newsboat``` (thanks u/TopDownTom, u/MuddyArch and u/armoredkitten22 from the Arch Linux Reddit community for their explanations and suggestions!)
 
 TO DO:
-- Considering adding a bunch of new options, some of them using ```systemd``` capabilities, check logs, give system information... That must likely imply using a main menu and then some sub-menus, so it would be a tad bit less straightforward/newbie-friendly perhaps. Maybe fork the code for an "advanced" version.
 - "Prettify" the scheme a bit.
 ****************************************************************************
 almh (Arch Linux Maintenance Helper) is (c) Voider 2020
