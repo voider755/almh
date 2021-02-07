@@ -13,16 +13,16 @@ red = '\033[31m'
 blue = '\033[34m'
 resetc = '\33[m'
 print('\n' , red + 'IMPORTANT.', resetc + "If you are using this for the first time, you'll need")
-print ("newsboat and pacman-contrib to use options 1, 3 and 7 .")
-print('Type special option' , green + "'12'" , resetc + 'to install pacman-contrib.')
-print('Type special option' , green + "'13'" , resetc + "to install newsboat and add Arch news RSS")
+print ("newsboat and pacman-contrib to use options 1, 3, 7 and 9 .")
+print('Type special option' , green + "'13'" , resetc + 'to install pacman-contrib.')
+print('Type special option' , green + "'14'" , resetc + "to install newsboat and add Arch news RSS")
 print('to read the Arch web news section before upgrading.\n')
 print(blue + '************************************************************************' , resetc)
 print(blue + '**' , resetc , '                            almh                                 ' , blue + '**' , resetc)
 print(blue + '**' , resetc , '                (ARCH LINUX MAINTENANCE HELPER)                  ' , blue + '**' , resetc)
 print(blue + '************************************************************************' , resetc)
 print('\n')
-print("PLEASE CHOOSE AN OPTION (type a number 1-11):\n***Entries marked with '#' will run with sudo.\nWrite your password if, and when, prompted***\n")
+print("PLEASE CHOOSE AN OPTION (type a number 1-12):\n***Entries marked with '#' will run with sudo.\nWrite your password if, and when, prompted***\n")
 import os
 while True:
     try:
@@ -36,9 +36,10 @@ while True:
 * 6.  # Remove installed package(s) (with unneeded dependencies)       *
 * 7.  # Remove all cached versions of uninstalled packages             *
 * 8.  # Remove orphaned packages                                       *
-* 9.  List explicitly installed packages                               *
-* 10. List all installed packages                                      *
-* 11. Exit (type 11 or use Ctrl+c)                                     *
+* 9.  # Check for .pac* files                                          *
+* 10. List explicitly installed packages                               *
+* 11. List all installed packages                                      *
+* 12. Exit (type 12 or use Ctrl+c)                                     *
 ************************************************************************\n
  """ , resetc)
         options = int(input())
@@ -75,20 +76,23 @@ while True:
             os.system('sudo pacman -Qtdq | sudo pacman -Rns -')
             print("\n")
         elif options == 9:
-            os.system('pacman -Qe | column')
+            os.system('sudo pacdiff')
             print("\n")
         elif options == 10:
+            os.system('pacman -Qe | column')
+            print("\n")
+        elif options == 11:
             os.system('pacman -Q | column')
             print("\n")
         elif options == 12:
-            os.system('sudo pacman -S pacman-contrib')
-            print("\n")
-        elif options == 13:
-            os.system("sudo pacman -S newsboat && sleep 4 && mkdir ~/.config/newsboat/ && echo 'https://archlinux.org/feeds/news/' >> ~/.config/newsboat/urls")
-            print("\n")
-        elif options == 11:
             print("Thank you for using almh")
             break
+        elif options == 13:
+            os.system('sudo pacman -S pacman-contrib')
+            print("\n")
+        elif options == 14:
+            os.system("sudo pacman -S newsboat && sleep 4 && mkdir ~/.config/newsboat/ && echo 'https://archlinux.org/feeds/news/' >> ~/.config/newsboat/urls")
+            print("\n")
         else:
             print(red + "Please choose an option, 1-11\n" , resetc)
     except KeyboardInterrupt:
