@@ -4,7 +4,7 @@
 # Contact me: voider (at) disroot dot org or as "invoider" at mastodon dot social
 # https://invoider.wordpress.com
 # License: FreeBSD(-like) License. Use at your own risk
-# Gives you a CLI menu with some common maintenance options inside 
+# Gives you a CLI menu with some common maintenance options inside
 # a *stock* Arch Linux system
 # Please read the README file and code before using this
 green = '\033[32m'
@@ -33,7 +33,7 @@ while True:
 *      packages (except for the most recent 3 versions)                *
 * 4.  Search packages in the repositories database                     *
 * 5.  # Install packages                                               *
-* 6   # Remove installed package(s) (with unneeded dependencies)       *
+* 6.  # Remove installed package(s) (with unneeded dependencies)       *
 * 7.  # Remove all cached versions of uninstalled packages             *
 * 8.  # Remove orphaned packages                                       *
 * 9.  List explicitly installed packages                               *
@@ -95,7 +95,3 @@ while True:
         exit()
     except:
         print (red + "Please choose an option, 1-11\n" , resetc)
-<<<<<<< HEAD
-=======
-
->>>>>>> 011421837264842578e7687b057b541a6c4e635e
