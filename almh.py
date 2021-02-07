@@ -33,7 +33,7 @@ while True:
 *      packages (except for the most recent 3 versions)                *
 * 4.  Search packages in the repositories database                     *
 * 5.  # Install packages                                               *
-* 6.   # Remove installed package(s) (with unneeded dependencies)       *
+* 6.  # Remove installed package(s) (with unneeded dependencies)       *
 * 7.  # Remove all cached versions of uninstalled packages             *
 * 8.  # Remove orphaned packages                                       *
 * 9.  List explicitly installed packages                               *
