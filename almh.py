@@ -2,7 +2,10 @@
 # almh (Arch Linux Maintenance Helper)
 # (c) Voider 2020
 # Contact me: voider (at) disroot dot org or as "invoider" at mastodon dot social
+# https://github.com/voider755
 # https://invoider.wordpress.com
+# Some contributions to the code were made by lxgr-linux
+# https://github.com/lxgr-linux
 # License: FreeBSD(-like) License. Use at your own risk
 # Gives you a CLI menu with some common maintenance options inside
 # a *stock* Arch Linux system
