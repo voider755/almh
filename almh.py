@@ -97,8 +97,8 @@ while True:
             os.system("sudo pacman -S newsboat && sleep 4 && mkdir ~/.config/newsboat/ && echo 'https://archlinux.org/feeds/news/' >> ~/.config/newsboat/urls")
             print("\n")
         else:
-            print(red + "Please choose an option, 1-11\n" , resetc)
+            print(red + "Please choose an option, 1-12\n" , resetc)
     except KeyboardInterrupt:
         exit()
     except:
-        print (red + "Please choose an option, 1-11\n" , resetc)
+        print (red + "Please choose an option, 1-12\n" , resetc)
