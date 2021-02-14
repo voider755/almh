@@ -32,10 +32,12 @@ CHANGES:
 - File made executable without the Python prefix and added option to exit the program with ```Ctrl+c``` (thanks xgr-linux!)
 - Now, after performing a package query, an option to ask if the user wants to install some package pops up automatically.
 - The shell script which installs ```newsboat``` won't overwrite any (likely non existent) ```urls``` config file. Plus, it is now put inside the more XDG-compliant ```~/.config/newsboat``` instead of the app default ```~/.newsboat``` (thanks u/TopDownTom, u/MuddyArch and u/armoredkitten22 from the Arch Linux Reddit community for their explanations and suggestions!)
-UPDATE 1: - New option to check ```.pac*``` files using ```pacdiff``` (which is part of ```pacman-contrib```). Internally it uses ```vimdiff```, so you can use ```vim``` commands to manage this. Please check [this entry in the Arch Wiki](https://wiki.archlinux.org/index.php/Vim#Merging_files). (This and some more, thanks again to xgr-linux!)
+- (Update 02/14/21) New option to check ```.pac*``` files using ```pacdiff``` (which is part of ```pacman-contrib```). Internally it uses ```vimdiff```, so you can use ```vim``` commands to manage this. Please check [this entry in the Arch Wiki](https://wiki.archlinux.org/index.php/Vim#Merging_files). (This and some more, thanks again to xgr-linux!)
 
 TO DO:
 - "Prettify" the scheme a bit.
+- Add a submenu with some "advanced" options.
+- Remove the ".py" in the executable file name.
 ****************************************************************************
 almh (Arch Linux Maintenance Helper) is (c) Voider 2020
 Contact me: voider (at) disroot.org or as "invoider" at mastodon dot social
